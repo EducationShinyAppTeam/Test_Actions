@@ -1,7 +1,7 @@
 name: "Assign Reviewers"
 on:
   pull_request:
-    types: [opened, ready_for_review]
+    types: [opened, unassigned]
 
 jobs:
   assign-reviewers:
@@ -10,5 +10,5 @@ jobs:
     - name: "Adding Teams and Persons for review"
       uses: dixahq/autoassign-reviewers-action@v0.8
       with:
-        repo-token: ${{ secrets.ACTIONS_ACCESS_TOKEN }}
+        repo-token: ${{ secrets.GH_ACTIONS_ACCESS_TOKEN }}
         teams: "reviewers"         # only works for GitHub Organisation/Teams
