@@ -10,5 +10,5 @@ jobs:
     - name: "Adding Teams and Persons for review"
       uses: dixahq/autoassign-reviewers-action@v0.8
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        repo-token: ${{ secrets.ACTIONS_ACCESS_TOKEN }}
         teams: "reviewers"         # only works for GitHub Organisation/Teams
