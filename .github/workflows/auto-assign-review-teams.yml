@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: "Adding Teams and Persons for review"
-      uses: adipatel/auto-assign-review-teams@v0.3
+      uses: dixahq/autoassign-reviewers-action@v0.8
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         teams: "reviewers"         # only works for GitHub Organisation/Teams
